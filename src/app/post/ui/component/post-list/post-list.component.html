@@ -1,0 +1,17 @@
+<h1 class="title">Les articles</h1>
+<ul class="container">
+@for (post of posts$ | async; track post.id) {
+    <li>
+        <article class="post">
+            <header class="header">
+                <h2>{{post.title}}</h2>
+            </header>
+            <p class="content">{{post.body}}</p>
+            <footer class="footer">
+                <p>Identifiant: {{post.id}}</p>
+                <p>Id. utilisateur: {{post.userId}}</p>
+            </footer>
+        </article>
+    </li>
+}
+</ul>
