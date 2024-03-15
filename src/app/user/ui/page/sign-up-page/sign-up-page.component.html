@@ -1,0 +1,23 @@
+<form #signUpForm="ngForm"
+(ngSubmit)="signUp()">
+    <div>
+        <label for="email">E-mail</label>
+        <input type="email" 
+        required
+        [(ngModel)]="signUpUser.email"
+        name="email"
+        >
+    </div>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" 
+        required
+        [(ngModel)]="signUpUser.password"
+        name="password"
+        >
+    </div>
+    <div>
+        <button type="submit">Créer mon compte</button>
+        <button (click)="goToSignInPage()">Me connecter</button>
+    </div>
+</form>

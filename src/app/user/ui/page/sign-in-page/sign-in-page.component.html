@@ -1,0 +1,22 @@
+<form (ngSubmit)="signIn()">
+    <div>
+        <label for="email">E-mail</label>
+        <input type="email" 
+        required
+        [(ngModel)]="signInUser.email"
+        name="email"
+        >
+    </div>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" 
+        required
+        [(ngModel)]="signInUser.password"
+        name="password"
+        >
+    </div>
+    <div>
+        <button type="submit">Me connecter</button>
+        <button (click)="goToSignUpPage()">Créer mon compte</button>
+    </div>
+</form>
